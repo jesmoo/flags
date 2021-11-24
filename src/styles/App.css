@@ -15,13 +15,14 @@ html {
   font-size: 62.5%;
 }
 body {
-  padding: 15px;
   font-size: 1.6rem;
+  background-color: #202d36;
 }
 header {
   width: 100%;
 }
 h1 {
+  color: #fff;
   font-size: 2.4rem;
   font-weight: lighter;
   font-family: var(--FontTitle);
@@ -31,6 +32,7 @@ h3 {
   font-size: 2.2rem;
   font-family: var(--FontSubtitle);
   font-weight: 300;
+  color: #fff;
 }
 h3 {
   font-size: 1.8rem;
@@ -39,11 +41,13 @@ p {
   font-size: 1.4rem;
   font-weight: lighter;
   font-family: var(--FontText);
+  color: #fff;
 }
 li {
   list-style: none;
 }
 a {
+  color: #fff;
   text-decoration: none;
 }
 a:link {

@@ -1,5 +1,7 @@
 header {
   height: 100%;
+  padding: 15px;
+  background-color: #2b3743;
 }
 .header--section {
   width: 100%;
