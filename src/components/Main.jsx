@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import Selection from './Selection';
-import ListMap from './ListMap';
+import MapContainer from './MapContainer';
 import '../styles/components/Main.css';
 
 const Main = () => {
@@ -9,7 +9,7 @@ const Main = () => {
     <main className="main__container">
       <Search />
       <Selection />
-      <ListMap />
+      <MapContainer />
     </main>
   );
 };
