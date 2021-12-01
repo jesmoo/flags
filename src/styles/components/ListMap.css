@@ -1,7 +1,8 @@
 .container__listMap {
   width: 23.3rem;
   height: 28.7rem;
-  background-color: red;
+  display: block;
+  background-color: #2b3743;
   margin-bottom: 3rem;
 }
 .listMap__img {

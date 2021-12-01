@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/components/ListMap.css';
 
 const ListMap = () => {
   return (
-    <section className="container__listMap">
+    <Link to="/details" className="container__listMap">
       <div className="listMap__img">
         <img src="" alt="flag of the countries" loading="lazy" />
       </div>
@@ -22,7 +23,7 @@ const ListMap = () => {
           <p className="text__subMain">Cancun</p>
         </div>
       </section>
-    </section>
+    </Link>
   );
 };
 

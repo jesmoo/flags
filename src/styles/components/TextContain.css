@@ -1,0 +1,8 @@
+.contain__text {
+  display: flex;
+  grid-column: span 4;
+}
+.text--bold {
+  font-weight: bold;
+  margin-right: 0.7rem;
+}
