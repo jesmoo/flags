@@ -28,7 +28,6 @@
 .main__flag {
   width: 29rem;
   height: 19.7rem;
-  background-color: beige;
   grid-column: span 4;
 }
 .main__country {

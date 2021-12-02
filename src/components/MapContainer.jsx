@@ -5,7 +5,6 @@ import '../styles/components/MapContainer.css';
 
 const MapContainer = () => {
   const initialState = useInitialState();
-  console.log(initialState);
   return (
     <section className="container__list">
       {initialState.loading ? (

@@ -1,7 +1,7 @@
-const API = 'https://restcountries.com/v2/all';
+const API = 'https://restcountries.com/v2';
 
-const getData = async (id) => {
-  const apiURL = id ? `${API}/${id}` : API;
+const getData = async (name) => {
+  const apiURL = name ? `${API}/name/${name}` : `${API}/all`;
   try {
     const response = await fetch(apiURL);
     const data = await response.json();

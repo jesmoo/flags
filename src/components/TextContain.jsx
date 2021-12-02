@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/components/TextContain.css';
 
-const TextContain = () => {
+const TextContain = ({ title, contain }) => {
   return (
     <div className="contain__text">
-      <p className="text--bold">Pais:</p>
-      <p className="text--simple">Mexico</p>
+      <p className="text--bold">{title}:</p>
+      <p className="text--simple">{contain}</p>
     </div>
   );
 };
