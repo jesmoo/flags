@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  .main__container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .container__selection {
+    grid-column: 6 / span 3;
+  }
+  .container__list {
+    width: 100%;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: space-evenly;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, 23.3rem);
+  }
+  .container__listMap {
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .main__container {
+    max-width: 1024px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .container__selection {
+    grid-column: 10 / span 3;
+  }
+}

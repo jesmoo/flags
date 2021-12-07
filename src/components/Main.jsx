@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ListMap from './ListMap';
 import getData from '../utils/getData';
 import '../styles/components/Main.css';
+import '../styles/breakpoints/mainQueris.css';
 
 const Main = () => {
   const [typed, setTyped] = useState({});
