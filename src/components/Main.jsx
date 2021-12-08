@@ -3,6 +3,7 @@ import ListMap from './ListMap';
 import getData from '../utils/getData';
 import '../styles/components/Main.css';
 import '../styles/breakpoints/mainQueris.css';
+import SkeletonListMap from './SkeletonListMap';
 
 const Main = () => {
   const [typed, setTyped] = useState({});
@@ -118,8 +119,17 @@ const Main = () => {
         </select>
       </section>
       <section className="container__list">
-        {data.loading ? (
-          <h1>Cargando</h1>
+        {auxData.loading ? (
+          <>
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+            <SkeletonListMap />
+          </>
         ) : (
           data && data.map((item, id) => <ListMap key={id} {...item} />)
         )}

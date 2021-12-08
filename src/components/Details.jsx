@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import TextContain from './TextContain';
 import useOneData from '../Hooks/useOneData';
+import SkeletonDetails from './SkeletonDetails';
 import '../styles/components/Details.css';
 import '../styles/breakpoints/detailsQueris.css';
 
@@ -17,7 +18,7 @@ const Details = () => {
         <p>Back</p>
       </Link>
       {initialState && initialState.loading ? (
-        <h1>cargando...</h1>
+        <SkeletonDetails />
       ) : (
         <>
           <img
