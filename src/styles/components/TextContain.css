@@ -1,6 +1,6 @@
 .contain__text {
   display: flex;
-  grid-column: span 4;
+  margin-bottom: 1.8rem;
 }
 .text--bold {
   font-weight: bold;
