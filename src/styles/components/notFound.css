@@ -9,6 +9,10 @@
   justify-content: center;
   align-items: center;
 }
+.btnNotfound {
+  width: 9rem;
+  height: 4rem;
+}
 .container__main-notFound h1 {
   font-size: 5rem;
 }
