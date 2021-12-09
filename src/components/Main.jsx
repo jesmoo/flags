@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import ListMap from './ListMap';
+import Search from './Search';
+import Selection from './Selection';
+import ContainerFlags from './ContainerFlags';
 import getData from '../utils/getData';
 import '../styles/components/Main.css';
 import '../styles/breakpoints/mainQueris.css';
-import SkeletonListMap from './SkeletonListMap';
 
 const Main = () => {
   const [typed, setTyped] = useState({});
@@ -71,69 +72,9 @@ const Main = () => {
 
   return (
     <main className="main__container">
-      <section className="container__sectionSearch">
-        <span className="sectionSearch__icon" />
-        {auxData && !auxData.loading ? (
-          <>
-            <input
-              onChange={handleTyped}
-              value={typed.value}
-              className="sectionSearch__text"
-              type="text"
-              name="search"
-              id="search"
-              placeholder="Search for a country..."
-            />
-          </>
-        ) : (
-          <>
-            <input className="sectionSearch__text" placeholder="Loading..." />
-          </>
-        )}
-      </section>
-
-      <section className="container__selection">
-        <select
-          name="menu"
-          className="selectFilter"
-          onChange={handleSelection}
-          id="menu"
-        >
-          {auxData && !auxData.loading ? (
-            <>
-              <option value="1" disabled selected>
-                Filer by Region
-              </option>
-              <option value="Africa">Africa</option>
-              <option value="Americas">America</option>
-              <option value="Asia">Asia</option>
-              <option value="Europe">Europe</option>
-              <option value="Oceania">Oceania</option>
-              <option value="2">Clean filter</option>
-            </>
-          ) : (
-            <>
-              <option value="Loading">Loading...</option>
-            </>
-          )}
-        </select>
-      </section>
-      <section className="container__list">
-        {auxData.loading ? (
-          <>
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-            <SkeletonListMap />
-          </>
-        ) : (
-          data && data.map((item, id) => <ListMap key={id} {...item} />)
-        )}
-      </section>
+      <Search auxData={auxData} handleTyped={handleTyped} typed={typed} />
+      <Selection auxData={auxData} handleSelection={handleSelection} />
+      <ContainerFlags auxData={auxData} data={data} />
     </main>
   );
 };
